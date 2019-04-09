@@ -497,6 +497,7 @@ describe 'country descriptions' do
       it_splits '352545258',       ['352', '54', '52', '58']
       it_splits '352818181',       ['352', '81', '81', '81']
       it_splits '3523572141',      ['352', '35', '72', '14', '1']
+      it_splits '352261851',       ['352', '26', '18', '51']
     end
     describe 'Macedonia' do
       it_splits '38921234567', ['389', '2', '123', '4567'] # Skopje

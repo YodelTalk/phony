@@ -630,7 +630,8 @@ Phony.define do
           match(/^((2[^467]|[3-9]\d))\d{6}$/) >> split(2,2,2)   | # 2-digit NDC Regular 8 digits number or 6 digits with 2 digits extension
           match(/^((2[^467]|[3-9]\d))\d{7}$/) >> split(2,2,3)   | # 2-digit NDC Regular 6 digits with 4 digits extension
           match(/^((2[^467]|[3-9]\d))\d{8}$/) >> split(2,2,4)   | # 2-digit NDC Regular 6 digits number with 4 digits extension
-          match(/^(\d{2})\d{3}$/)             >> split(2,2,1)     # fallback for 5 digit number
+          match(/^(\d{2})\d{3}$/)             >> split(2,2,1)   | # fallback for 5 digit number
+          match(/^(\d{2})\d{4}$/)             >> split(2,2,2)     # fallback for 6 digit number, e.g: https://www.mgk-technologies.com/about-us
 
   # country '353' # Republic of Ireland, see special file.
 
